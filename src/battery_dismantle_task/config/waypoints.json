@@ -1,0 +1,80 @@
+{
+  "joints": {
+    "arm": [
+      "joint_1",
+      "joint_2",
+      "joint_3",
+      "joint_4",
+      "joint_5",
+      "joint_6",
+      "joint_7"
+    ],
+    "gripper": [
+      "robotiq_85_left_knuckle_joint"
+    ]
+  },
+  "poses": {
+    "HOME": [0.0, 0.2618, 3.14159, -2.2689, 0.0, 0.9599, 1.5708],
+    "OPEN": [0],
+    "CLOSE": [0.8],
+    "approach_bolts": [0.087, 0.576, 3.089, -1.641, -3.142, 0.803, 0.105],
+    "place_bolts": [0.646, 1.065, -3.124, -1.257, -3.107, 0.89, 0.628]
+  },
+  "defaults": {
+    "velocity_scaling": 0.8,
+    "accel_scaling": 0.8
+  },
+  "scene": {
+    "battery": {
+      "id": "BatteryBox",
+      "frame": "world",
+      "size": [0.3, 0.2, 0.15],
+      "pose": {
+        "position": {"x": 0.5, "y": 0.0, "z": 0.05},
+        "orientation": {"x": 0.0, "y": 0.0, "z": 0.0, "w": 1.0}
+      }
+    },
+    "parts": [
+      {
+        "id": "TopCoverBolts",
+        "frame": "world",
+        "type": "box",
+        "size": [0.3, 0.2, 0.02],
+        "pose": {
+          "position": {"x": 0.5, "y": 0.0, "z": 0.14},
+          "orientation": {"x": 0.0, "y": 0.0, "z": 0.0, "w": 1.0}
+        }
+      }
+    ]
+  },
+  "objects": {
+    "TopCoverBolts": {
+      "approach": [0.087, 0.576, 3.089, -1.641, -3.142, 0.803, 0.105],
+      "place": [0.646, 1.065, -3.124, -1.257, -3.107, 0.89, 0.628],
+      "retreat": [0.0, 0.2618, 3.14159, -2.2689, 0.0, 0.9599, 1.5708],
+      "gripper_hooks": {
+        "on_approach": "OPEN",
+        "after_approach": "CLOSE",
+        "after_place": "OPEN"
+      },
+      "io": {
+        "do_attach_after_approach": true,
+        "do_detach_after_place": true
+      }
+    },
+    "BatteryBox_0": {
+      "approach": [0.087, 0.576, 3.089, -1.641, -3.142, 0.803, 0.105],
+      "place": [2.653, -1.466, -0.89, 0.052, -2.286, 1.71, -0.977],
+      "retreat": [0.0, 0.2618, 3.14159, -2.2689, 0.0, 0.9599, 1.5708],
+      "gripper_hooks": {
+        "on_approach": "OPEN",
+        "after_approach": "CLOSE",
+        "after_place": "OPEN"
+      },
+      "io": {
+        "do_attach_after_approach": true,
+        "do_detach_after_place": true
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "available_skills": [
+    {
+      "name": "moveTo",
+      "description": "Move robot arm to a named pose",
+      "parameters": {
+        "target": {
+          "type": "pose_name",
+          "required": true
+        }
+      },
+      "example": {"name": "moveTo", "params": {"target": "HOME"}}
+    },
+    {
+      "name": "grasp",
+      "description": "Close gripper and grasp object",
+      "parameters": {
+        "target": {
+          "type": "object_id",
+          "required": true
+        }
+      },
+      "example": {"name": "grasp", "params": {"target": "TopCoverBolts"}}
+    },
+    {
+      "name": "release",
+      "description": "Open gripper and release object",
+      "parameters": {
+        "target": {
+          "type": "object_id",
+          "required": true
+        }
+      },
+      "example": {"name": "release", "params": {"target": "TopCoverBolts"}}
+    }
+  ],
+
+  "available_poses": [
+    "HOME",
+    "OPEN",
+    "CLOSE",
+    "approach_bolts",
+    "place_bolts"
+  ],
+
+  "available_objects": [
+    "TopCoverBolts",
+    "BatteryBox_0"
+  ],
+
+  "skill_constraints": {
+    "max_plan_length": 20,
+    "forbidden_sequences": [
+      ["grasp", "grasp"],
+      ["release", "release"]
+    ],
+    "must_end_at": "HOME"
+  }
+}
