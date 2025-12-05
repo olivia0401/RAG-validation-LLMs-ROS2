@@ -1,0 +1,69 @@
+{
+  "available_skills": [
+    {
+      "name": "moveTo",
+      "description": "Move robot arm to a named pose (HOME, approach_bolts, place_bolts). Does NOT work with object names.",
+      "required_params": ["target"],
+      "examples": [
+        {"target": "HOME"},
+        {"target": "approach_bolts"},
+        {"target": "place_bolts"}
+      ]
+    },
+    {
+      "name": "grasp",
+      "description": "Complete grasp sequence for target object: opens gripper, moves to approach position, closes gripper, attaches object. Use this for picking up objects.",
+      "required_params": ["target"],
+      "examples": [
+        {"target": "TopCoverBolts"},
+        {"target": "BatteryBox_0"}
+      ],
+      "internal_sequence": [
+        "Open gripper (using object's gripper_hooks.on_approach pose)",
+        "Move arm to object's approach position",
+        "Close gripper (using object's gripper_hooks.after_approach pose)",
+        "Attach object to gripper (if object.io.do_attach_after_approach is true)"
+      ]
+    },
+    {
+      "name": "release",
+      "description": "Complete release sequence for grasped object: detaches object from gripper, opens gripper. Use this for placing objects.",
+      "required_params": ["target"],
+      "examples": [
+        {"target": "TopCoverBolts"},
+        {"target": "BatteryBox_0"}
+      ],
+      "internal_sequence": [
+        "Detach object from gripper",
+        "Open gripper to release"
+      ]
+    },
+    {
+      "name": "openGripper",
+      "description": "Manually open the gripper. Only use if you need gripper control independent of grasp/release.",
+      "required_params": [],
+      "note": "Usually not needed - grasp and release handle gripper automatically"
+    },
+    {
+      "name": "closeGripper",
+      "description": "Manually close the gripper. Only use if you need gripper control independent of grasp/release.",
+      "required_params": [],
+      "note": "Usually not needed - grasp and release handle gripper automatically"
+    }
+  ],
+  "available_poses": [
+    "HOME",
+    "approach_bolts",
+    "place_bolts"
+  ],
+  "available_objects": [
+    "TopCoverBolts",
+    "BatteryBox_0"
+  ],
+  "skill_usage_notes": {
+    "for_picking_objects": "Use grasp(ObjectName) - handles entire pick sequence",
+    "for_placing_objects": "Use release(ObjectName) - handles entire place sequence",
+    "for_moving_to_poses": "Use moveTo(PoseName) - only for named poses, NOT objects",
+    "common_mistake": "Do NOT use moveTo with object names like TopCoverBolts - use grasp/release instead"
+  }
+}

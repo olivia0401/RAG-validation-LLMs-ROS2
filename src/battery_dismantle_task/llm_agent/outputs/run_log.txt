@@ -1,0 +1,830 @@
+
+============================================================
+Execution at 2025-11-14 15:28:18.174499
+============================================================
+Success: True
+Executed: 2
+Failed: 0
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - SUCCESS
+  Step 2: {'step': 2, 'name': 'release', 'params': {'target': 'TopCoverBolts'}} - SUCCESS
+
+============================================================
+Execution at 2025-11-14 15:30:52.709702
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 15:30:52.713622
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 15:30:53.684278
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 16:34:04.679207
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 16:34:05.680880
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 16:34:06.683046
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 17:01:47.977119
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 17:01:48.964156
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 17:01:49.978727
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 17:29:01.884758
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 17:29:02.885964
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 17:29:03.886308
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 17:34:11.951891
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 17:34:12.603989
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 17:34:12.940416
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 17:46:02.007171
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 17:46:02.106627
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 17:46:02.204239
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 18:25:51.671322
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 18:25:51.765003
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 18:25:51.956337
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 19:34:50.039644
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 19:34:50.539603
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 19:34:51.049862
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 19:59:23.708636
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 19:59:24.209118
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 19:59:24.716385
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 20:07:35.786266
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 20:07:36.304419
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 20:07:36.801275
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 20:37:08.966311
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 20:37:09.464177
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 20:37:09.956391
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 22:11:55.559773
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 22:12:02.613938
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 22:12:09.699255
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 22:47:05.882094
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 22:47:12.485752
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 22:47:18.435750
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 23:06:45.012741
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 23:06:51.681678
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 23:06:58.392912
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 23:23:11.085792
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 23:23:11.595673
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 23:23:12.096727
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 23:36:57.240460
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 23:36:57.738768
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-14 23:36:58.238526
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-15 00:09:23.090539
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-15 00:09:23.597404
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-15 00:09:24.090446
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-15 00:32:35.533852
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-15 00:32:36.030838
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-15 00:32:36.523533
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-15 11:12:59.212351
+============================================================
+Success: True
+Executed: 2
+Failed: 0
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - SUCCESS
+  Step 2: {'step': 2, 'name': 'release', 'params': {'target': 'TopCoverBolts'}} - SUCCESS
+
+============================================================
+Execution at 2025-11-15 11:22:28.155829
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-15 11:22:28.340977
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-15 11:22:28.529114
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-15 11:28:49.998598
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-15 11:28:52.001094
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-15 11:28:54.008918
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-15 12:26:51.550524
+============================================================
+Success: True
+Executed: 2
+Failed: 0
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - SUCCESS
+  Step 2: {'step': 2, 'name': 'release', 'params': {'target': 'TopCoverBolts'}} - SUCCESS
+
+============================================================
+Execution at 2025-11-15 12:48:07.646004
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-15 12:50:07.649917
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-15 12:52:07.745537
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-15 15:10:52.006398
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-15 15:12:52.080227
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-15 15:14:52.091151
+============================================================
+Success: False
+Executed: 0
+Failed: 1
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - FAILED
+
+============================================================
+Execution at 2025-11-15 15:59:00.861462
+============================================================
+Success: True
+Executed: 2
+Failed: 0
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - SUCCESS
+  Step 2: {'step': 2, 'name': 'release', 'params': {'target': 'TopCoverBolts'}} - SUCCESS
+
+============================================================
+Execution at 2025-11-15 16:00:06.682021
+============================================================
+Success: True
+Executed: 2
+Failed: 0
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - SUCCESS
+  Step 2: {'step': 2, 'name': 'release', 'params': {'target': 'TopCoverBolts'}} - SUCCESS
+
+============================================================
+Execution at 2025-11-15 16:13:08.579787
+============================================================
+Success: True
+Executed: 2
+Failed: 0
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - SUCCESS
+  Step 2: {'step': 2, 'name': 'release', 'params': {'target': 'TopCoverBolts'}} - SUCCESS
+
+============================================================
+Execution at 2025-11-15 16:34:29.977888
+============================================================
+Success: True
+Executed: 2
+Failed: 0
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - SUCCESS
+  Step 2: {'step': 2, 'name': 'release', 'params': {'target': 'TopCoverBolts'}} - SUCCESS
+
+============================================================
+Execution at 2025-11-15 16:37:24.673629
+============================================================
+Success: True
+Executed: 2
+Failed: 0
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - SUCCESS
+  Step 2: {'step': 2, 'name': 'release', 'params': {'target': 'TopCoverBolts'}} - SUCCESS
+
+============================================================
+Execution at 2025-11-15 16:42:22.270248
+============================================================
+Success: True
+Executed: 2
+Failed: 0
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - SUCCESS
+  Step 2: {'step': 2, 'name': 'release', 'params': {'target': 'TopCoverBolts'}} - SUCCESS
+
+============================================================
+Execution at 2025-11-15 16:44:14.566212
+============================================================
+Success: True
+Executed: 2
+Failed: 0
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - SUCCESS
+  Step 2: {'step': 2, 'name': 'release', 'params': {'target': 'TopCoverBolts'}} - SUCCESS
+
+============================================================
+Execution at 2025-11-15 16:51:56.164864
+============================================================
+Success: True
+Executed: 6
+Failed: 0
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - SUCCESS
+  Step 2: {'step': 2, 'name': 'release', 'params': {'target': 'TopCoverBolts'}} - SUCCESS
+  Step 3: {'step': 3, 'name': 'moveTo', 'params': {'target': 'HOME'}} - SUCCESS
+  Step 4: {'step': 4, 'name': 'grasp', 'params': {'target': 'BatteryBox_0'}} - SUCCESS
+  Step 5: {'step': 5, 'name': 'release', 'params': {'target': 'BatteryBox_0'}} - SUCCESS
+  Step 6: {'step': 6, 'name': 'moveTo', 'params': {'target': 'HOME'}} - SUCCESS
+
+============================================================
+Execution at 2025-11-15 17:14:40.652842
+============================================================
+Success: True
+Executed: 6
+Failed: 0
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - SUCCESS
+  Step 2: {'step': 2, 'name': 'release', 'params': {'target': 'TopCoverBolts'}} - SUCCESS
+  Step 3: {'step': 3, 'name': 'moveTo', 'params': {'target': 'HOME'}} - SUCCESS
+  Step 4: {'step': 4, 'name': 'grasp', 'params': {'target': 'BatteryBox_0'}} - SUCCESS
+  Step 5: {'step': 5, 'name': 'release', 'params': {'target': 'BatteryBox_0'}} - SUCCESS
+  Step 6: {'step': 6, 'name': 'moveTo', 'params': {'target': 'HOME'}} - SUCCESS
+
+============================================================
+Execution at 2025-11-15 17:19:32.285751
+============================================================
+Success: True
+Executed: 6
+Failed: 0
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - SUCCESS
+  Step 2: {'step': 2, 'name': 'release', 'params': {'target': 'TopCoverBolts'}} - SUCCESS
+  Step 3: {'step': 3, 'name': 'moveTo', 'params': {'target': 'HOME'}} - SUCCESS
+  Step 4: {'step': 4, 'name': 'grasp', 'params': {'target': 'BatteryBox_0'}} - SUCCESS
+  Step 5: {'step': 5, 'name': 'release', 'params': {'target': 'BatteryBox_0'}} - SUCCESS
+  Step 6: {'step': 6, 'name': 'moveTo', 'params': {'target': 'HOME'}} - SUCCESS
+
+============================================================
+Execution at 2025-11-15 22:01:13.405777
+============================================================
+Success: True
+Executed: 6
+Failed: 0
+
+Detailed Log:
+  Step 1: {'step': 1, 'name': 'grasp', 'params': {'target': 'TopCoverBolts'}} - SUCCESS
+  Step 2: {'step': 2, 'name': 'release', 'params': {'target': 'TopCoverBolts'}} - SUCCESS
+  Step 3: {'step': 3, 'name': 'moveTo', 'params': {'target': 'HOME'}} - SUCCESS
+  Step 4: {'step': 4, 'name': 'grasp', 'params': {'target': 'BatteryBox_0'}} - SUCCESS
+  Step 5: {'step': 5, 'name': 'release', 'params': {'target': 'BatteryBox_0'}} - SUCCESS
+  Step 6: {'step': 6, 'name': 'moveTo', 'params': {'target': 'HOME'}} - SUCCESS
