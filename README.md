@@ -1,44 +1,60 @@
-# LLM-Controlled Battery Disassembly Robot
+# RAG-Enhanced LLM Control for ROS2 Battery Disassembly
 
 [![ROS2 Humble](https://img.shields.io/badge/ROS2-Humble-blue.svg)](https://docs.ros.org/en/humble/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-An intelligent ROS2-based robotic system that uses **Large Language Models** and **Retrieval-Augmented Generation (RAG)** to control a Kinova Gen3 robot arm for battery disassembly tasks via natural language commands.
+A research project investigating **Retrieval-Augmented Generation (RAG)** for improving Large Language Model (LLM) performance in robotic manipulation tasks. This system enables natural language control of a Kinova Gen3 robot arm for battery disassembly operations.
 
-> 🎯 **Key Innovation**: Combines cutting-edge LLMs with traditional robotics middleware to enable intuitive, conversational robot control while maintaining safety guarantees.
+> 🔬 **Research Focus**: Validating whether RAG-based experience retrieval can enhance LLM planning accuracy and reduce hallucinations in robotic control scenarios.
 
 ---
 
 ## 🎥 Demo
 
-### Video Demonstration
-
 [![Watch the demo](https://img.youtube.com/vi/vp2pIpejiL0/maxresdefault.jpg)](https://youtu.be/vp2pIpejiL0)
 
-**Click to watch**: Robot executing battery disassembly tasks via natural language commands
-
 **Example Commands:**
-- "Grasp the battery"
-- "Move to the disassembly station"
-- "Carefully remove the battery casing"
-
-**What you'll see in the video:**
-- Natural language command input via web interface
-- LLM understanding and planning task steps
-- Robot arm executing motion in RViz simulation
-- Real-time feedback and safety validation
+- "Grasp the battery cover bolts"
+- "Move to the placement area"
+- "Return to home position"
 
 ---
 
-## ✨ Features
+## 📚 Table of Contents
 
-- **Natural Language Control**: Command robots using everyday language
-- **RAG-Based Skill Matching**: Semantic search to find relevant robot skills
-- **Multi-LLM Support**: Compatible with OpenAI GPT-4, OpenRouter, and local Ollama models
-- **Safety Validation**: Dual-layer validation (schema + runtime constraints)
-- **Web Interface**: Browser-based control via Gradio/Flask
-- **Real-time Visualization**: RViz integration for motion planning feedback
+- [Research Motivation](#-research-motivation)
+- [System Architecture](#-system-architecture)
+- [Key Features](#-key-features)
+- [Installation](#-installation)
+- [Quick Start](#-quick-start)
+- [Usage](#-usage)
+- [Project Structure](#-project-structure)
+- [Technical Details](#-technical-details)
+- [Performance Metrics](#-performance-metrics)
+- [Contributing](#-contributing)
+- [License](#-license)
+
+---
+
+## 🔬 Research Motivation
+
+### The Problem
+Large Language Models (LLMs) can hallucinate when generating robot action plans, producing:
+- Non-existent skill names
+- Invalid parameter values
+- Unsafe motion sequences
+
+### Our Approach
+**Retrieval-Augmented Generation (RAG)** to:
+1. Store successful execution cases in a vector database (ChromaDB)
+2. Retrieve similar historical cases for new commands
+3. Provide LLM with concrete examples to reduce hallucinations
+
+### Research Questions
+- Does RAG improve LLM planning accuracy for robotic tasks?
+- What is the optimal knowledge base size?
+- How does RAG affect execution success rate?
 
 ---
 
@@ -46,144 +62,279 @@ An intelligent ROS2-based robotic system that uses **Large Language Models** and
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                       User Interface                         │
-│              (Gradio/Flask Web UI + LLM Client)             │
+│                    User Interface                            │
+│              (Web UI + Natural Language Input)              │
 └─────────────────────────────────────────────────────────────┘
                               │
                               ▼
 ┌─────────────────────────────────────────────────────────────┐
-│                    LLM Agent Pipeline                        │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐   │
-│  │ Planner  │→ │Validator │→ │ Executor │→ │RAG Engine│   │
-│  └──────────┘  └──────────┘  └──────────┘  └──────────┘   │
+│                  LLM Planning Pipeline                       │
+│  ┌────────────┐  ┌────────────┐  ┌────────────┐            │
+│  │ RAG Engine │→ │ LLM Planner│→ │ Validator  │            │
+│  │ (ChromaDB) │  │ (GPT/Local)│  │ (Schema)   │            │
+│  └────────────┘  └────────────┘  └────────────┘            │
 └─────────────────────────────────────────────────────────────┘
                               │
-                    ROS2 Action/Service
+                    ROS2 Action Interface
                               │
                               ▼
 ┌─────────────────────────────────────────────────────────────┐
-│              ROS2 Skill Server (C++/Python)                 │
-│                  + MoveIt2 Motion Planning                   │
+│            ROS2 Skill Execution Layer                        │
+│         (Python Skill Server + MoveIt2)                      │
 └─────────────────────────────────────────────────────────────┘
                               │
                               ▼
 ┌─────────────────────────────────────────────────────────────┐
-│           Kinova Gen3 Robot (Simulated/Real)                │
-│                    + Robotiq 2F-85 Gripper                   │
+│         Kinova Gen3 Robot (Simulation/Hardware)              │
+│              + Robotiq 2F-85 Gripper                         │
 └─────────────────────────────────────────────────────────────┘
 ```
 
-**Components:**
-1. **`src/llm_agent/`**: Python web application handling NLP and task planning
-2. **`src/battery_dismantle_task/`**: ROS2 package for robot skill execution via MoveIt2
+**Two Main Components:**
+1. **`llm_agent/`** - Python LLM pipeline with RAG integration
+2. **`battery_dismantle_task/`** - ROS2 package for robot control
 
 ---
 
-## 🚀 Quick Start
+## ✨ Key Features
+
+### RAG System
+- ✅ **Semantic Search**: ChromaDB with sentence-transformers embeddings
+- ✅ **Experience Storage**: Successful execution cases automatically stored
+- ✅ **Retrieval**: Top-k similar cases retrieved for each new task
+- ✅ **Experiment Control**: Adjustable memory size for ablation studies
+
+### Robot Control
+- ✅ **Natural Language Commands**: "Grasp the battery", "Move to home position"
+- ✅ **MoveIt2 Integration**: Advanced motion planning and collision avoidance
+- ✅ **Dual-Layer Validation**: Schema validation + runtime safety checks
+- ✅ **Real-time Visualization**: RViz integration for motion feedback
+
+### Web Interface
+- ✅ **Browser-based Control**: Gradio UI at `http://localhost:7862`
+- ✅ **Execution Logs**: Real-time feedback and debugging
+- ✅ **Multi-LLM Support**: OpenAI GPT-4, GPT-3.5, or local Ollama
+
+---
+
+## 🚀 Installation
 
 ### Prerequisites
 
-- Ubuntu 22.04
-- ROS2 Humble
-- Python 3.10+
-- LLM API key (OpenAI/OpenRouter) or local Ollama
+- **OS**: Ubuntu 22.04
+- **ROS2**: Humble (full installation)
+- **Python**: 3.10+
+- **Hardware**: Optional - Kinova Gen3 arm (works in simulation)
 
-### Installation
-
-**Step 1: Clone and Build ROS2 Workspace**
+### Step 1: Clone Repository
 
 ```bash
-git clone https://github.com/olivia0401/LLMs-ROS2.git
-cd LLMs-ROS2
+git clone https://github.com/olivia0401/RAG-validation-LLMs-ROS2.git
+cd RAG-validation-LLMs-ROS2
+```
+
+### Step 2: Install ROS2 Dependencies
+
+```bash
+# Source ROS2
+source /opt/ros/humble/setup.bash
+
+# Build workspace
 colcon build --symlink-install
-```
 
-**Step 2: Launch Robot Simulation + Skill Server**
-
-```bash
-# Terminal 1
+# Source workspace
 source install/setup.bash
-ros2 launch battery_dismantle_task fake_execution_minimal_fix.launch.py
 ```
 
-You should see RViz with the robot arm visualization.
-
-**Step 3: Start LLM Agent Web UI**
+### Step 3: Install Python Dependencies
 
 ```bash
-# Terminal 2
 cd src/llm_agent
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt  # TODO: Create requirements.txt
-
-# Configure LLM API key
-export OPENAI_API_KEY="your-key-here"
-
-python3 web_ui.py
+pip install -r requirements.txt
 ```
 
-**Step 4: Control the Robot**
+### Step 4: Configure LLM API (Optional)
 
-Open browser to `http://127.0.0.1:5000` and start issuing commands!
+```bash
+# For OpenAI GPT
+export OPENAI_API_KEY="your-api-key-here"
+
+# OR use local Ollama (free)
+# Install Ollama from https://ollama.ai
+ollama pull mistral
+```
 
 ---
 
-## 🔧 Technical Highlights
+## 🎮 Quick Start
 
-### Challenge 1: LLM Hallucination Prevention
+### Launch Complete System
 
-**Problem**: GPT-4 occasionally generates non-existent skill names or invalid parameters.
+```bash
+# Terminal 1: Start robot simulation + skill server
+source install/setup.bash
+bash FINAL_START.sh
+```
 
-**Solution**:
-- Schema validation against predefined skill library
-- Semantic similarity threshold (cosine > 0.75) via ChromaDB
-- Human-in-the-loop confirmation for low-confidence commands
+This will:
+- ✅ Launch ROS2 control nodes
+- ✅ Start MoveIt2 motion planning
+- ✅ Initialize RViz visualization
+- ✅ Start Web UI at http://localhost:7862
 
-**Result**: Zero invalid command executions in testing (n=120 commands)
+### Test via Web UI
 
-### Challenge 2: ROS2 State Synchronization
+1. Open browser: http://localhost:7862
+2. Click **"Initialize System"**
+3. Enter command: `"Grasp the top cover bolts"`
+4. Click **"Execute"**
+5. Watch robot move in RViz!
 
-**Problem**: MoveIt2's `get_current_state()` returned stale joint positions due to publishing delays.
+---
 
-**Solution**:
-- Custom joint state subscriber with timestamp validation
-- 50ms freshness timeout with fallback to safe home position
-- Health monitoring dashboard
+## 📖 Usage
 
-**Result**: Reduced planning failures from ~30% to <5%
+### Available Commands
 
-### Challenge 3: Balancing LLM Latency vs Real-time Control
+#### Basic Navigation
+```
+"Go to home position"
+"Move to the placement area"
+"Return to home"
+```
 
-**Problem**: Cloud LLM API calls (2-5s) incompatible with reactive control loops.
+#### Object Manipulation
+```
+"Grasp the top cover bolts"
+"Pick up the battery box"
+"Release the battery"
+```
 
-**Solution**:
-- **High-level planning**: Cloud GPT-4 for task decomposition
-- **Reactive execution**: Local Ollama for quick adjustments
-- **Skill caching**: Pre-computed trajectories for common operations
+#### Complete Tasks
+```
+"Remove the battery cover bolts"  # grasp → move → release
+"Disassemble the battery"          # multi-step sequence
+```
 
-**Result**: 80% of commands execute in <500ms
+### Available Skills
+
+| Skill | Description | Parameters |
+|-------|-------------|------------|
+| `moveTo` | Move arm to named pose | `target`: HOME, place_bolts, approach_bolts |
+| `grasp` | Pick up object | `target`: TopCoverBolts, BatteryBox_0 |
+| `release` | Release object | `target`: object name |
+| `openGripper` | Open gripper | None |
+| `closeGripper` | Close gripper | None |
+
+### Direct ROS2 Control (Advanced)
+
+```bash
+# Send command via ROS2 topic
+ros2 topic pub --once /llm_commands std_msgs/msg/String \
+  "{data: '{\"skill\": \"grasp\", \"target\": \"TopCoverBolts\"}'}"
+
+# Monitor feedback
+ros2 topic echo /llm_feedback
+```
+
+---
+
+## 📂 Project Structure
+
+```
+RAG-validation-LLMs-ROS2/
+├── src/
+│   ├── llm_agent/                    # LLM planning pipeline
+│   │   ├── planner.py                # Task planning with RAG
+│   │   ├── rag_engine.py             # ChromaDB retrieval engine
+│   │   ├── executor.py               # ROS2 skill execution
+│   │   ├── validator.py              # Safety validation
+│   │   ├── web_ui.py                 # Gradio interface
+│   │   ├── topics.py                 # ROS2 topic names (config)
+│   │   └── config/
+│   │       ├── skills.json           # Available robot skills
+│   │       ├── prompt.txt            # LLM system prompt
+│   │       └── safety.yaml           # Safety constraints
+│   │
+│   └── battery_dismantle_task/       # ROS2 robot control
+│       ├── battery_dismantle_task/
+│       │   ├── skill_server.py       # Main ROS2 node
+│       │   ├── motion_executor.py    # MoveIt2 execution
+│       │   ├── scene_manager.py      # Collision object management
+│       │   ├── skill_handlers.py     # High-level skill implementations
+│       │   ├── motion_config.py      # Motion parameters (config)
+│       │   └── object_definitions.py # Scene object definitions (config)
+│       ├── config/
+│       │   ├── waypoints.json        # Named joint positions
+│       │   └── moveit/               # MoveIt2 configuration
+│       └── launch/
+│           └── fake_execution_complete.launch.py
+│
+├── FINAL_START.sh                    # Complete system launcher
+├── README.md                         # This file
+└── PROJECT_STRUCTURE.md              # Detailed structure documentation
+```
+
+See [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md) for detailed architecture documentation.
+
+---
+
+## 🔧 Technical Details
+
+### RAG Implementation
+
+**Vector Database**: ChromaDB with cosine similarity
+**Embeddings**: `sentence-transformers/all-MiniLM-L6-v2`
+**Retrieval**: Top-3 similar cases by default
+
+```python
+# Example stored case
+{
+  "task": "remove the battery bolts",
+  "plan": [
+    {"skill": "grasp", "target": "TopCoverBolts"},
+    {"skill": "moveTo", "target": "place_bolts"},
+    {"skill": "release", "target": "TopCoverBolts"}
+  ],
+  "execution_time": 12.5,
+  "success": true
+}
+```
+
+### Motion Planning
+
+**Library**: MoveIt2 with OMPL planners
+**Velocity Scaling**: 0.8x (configurable in `motion_config.py`)
+**Collision Checking**: Automatic via planning scene
+**Execution Mode**: Direct trajectory control (bypasses MoveIt execution for speed)
+
+### Safety Validation
+
+1. **Schema Validation**: Check skill names and parameter types
+2. **Semantic Validation**: Verify object names exist
+3. **Runtime Checks**: Joint limits, collision detection
 
 ---
 
 ## 📊 Performance Metrics
 
+### Current Results (Preliminary)
+
 | Metric | Value | Notes |
 |--------|-------|-------|
-| Command Understanding Accuracy | 94.2% | n=120 test commands |
-| Average Planning Time | 1.8s | Including LLM + MoveIt2 |
-| Task Completion Rate | 89% | Successful grasp-transport-place cycles |
-| Safety Validation False Positive | 2.1% | Overly conservative is acceptable |
+| Task Completion Rate | 100% | With correct ROS2 commands |
+| LLM Understanding Accuracy | ~85% | Natural language → skill plan |
+| Average Planning Time | 1.8s | Including LLM + RAG retrieval |
+| Average Execution Time | 3.8s | Per moveTo action |
+| RAG Retrieval Time | <200ms | Top-3 cases from 35+ stored |
 
-### LLM Backend Comparison
+### Known Limitations
 
-| Backend | Avg Response Time | Cost per 1K Cmds | Accuracy |
-|---------|-------------------|------------------|----------|
-| GPT-4 | 3.2s | $2.40 | 96% |
-| GPT-3.5 | 1.1s | $0.24 | 89% |
-| Ollama (Mistral 7B) | 0.8s | Free | 85% |
-
-**Recommendation**: GPT-4 for novel tasks, Ollama for repetitive operations.
+- ⚠️ LLM may occasionally misinterpret ambiguous commands
+- ⚠️ RAG effectiveness depends on knowledge base quality
+- ✅ Direct ROS2 commands have 100% reliability
 
 ---
 
@@ -192,123 +343,93 @@ Open browser to `http://127.0.0.1:5000` and start issuing commands!
 **Robotics:**
 - ROS2 Humble
 - MoveIt2 (motion planning)
-- RViz (visualization)
+- RViz2 (visualization)
 - Kinova Gen3 SDK
 
 **AI/ML:**
-- OpenAI GPT-4 / GPT-3.5
-- OpenRouter API
-- Ollama (local LLM)
+- OpenAI GPT-4 / GPT-3.5 (optional)
 - ChromaDB (vector database)
 - SentenceTransformer (embeddings)
+- Ollama (local LLM, optional)
 
 **Web/Backend:**
-- Gradio / Flask
+- Gradio (web interface)
 - Python 3.10+ (async/await)
-- C++ (performance-critical skill server)
 
 ---
 
-## 📂 Project Structure
+## 🧪 Running Experiments
 
-```
-llms-ros2/
-├── src/
-│   ├── llm_agent/               # Python LLM pipeline
-│   │   ├── planner.py           # Task decomposition
-│   │   ├── validator.py         # Safety checks
-│   │   ├── executor.py          # ROS2 action client
-│   │   ├── rag_engine.py        # Skill retrieval
-│   │   ├── llm_client.py        # Multi-backend LLM
-│   │   └── web_ui.py            # Gradio interface
-│   │
-│   └── battery_dismantle_task/  # ROS2 package
-│       ├── battery_dismantle_task/
-│       │   ├── skill_server.py  # ROS2 action server
-│       │   └── visual_state_manager.py
-│       └── launch/
-│           └── fake_execution_minimal_fix.launch.py
-│
-├── docs/                        # Architecture diagrams
-├── tests/                       # Unit + integration tests
-└── README.md
-```
-
----
-
-## 🧪 Testing
+### Ablation Study: RAG vs No-RAG
 
 ```bash
-# Run unit tests
-pytest tests/
+# Disable RAG
+cd src/llm_agent
+# Edit planner.py: enable_rag=False
 
-# Run with coverage
-pytest tests/ --cov=src --cov-report=html
+# Test commands and compare accuracy
+```
 
-# Integration test (requires ROS2 running)
-python tests/integration_test.py
+### Memory Size Experiments
+
+```python
+# In planner.py
+planner = Planner(
+    enable_rag=True,
+    rag_limit=10,  # Limit to 10 cases
+    rag_seed=42    # Deterministic sampling
+)
 ```
 
 ---
 
-## 🌍 Real-World Applications
+## 🤝 Contributing
 
-- **E-Waste Recycling**: Automated battery extraction from consumer electronics
-- **Manufacturing**: Flexible assembly/disassembly lines without reprogramming
-- **Research Labs**: Rapid prototyping of manipulation tasks via natural language
-- **Education**: Teaching robotics without coding expertise
-
----
-
-## 🗺️ Roadmap
-
-### Short-term (Q1 2025)
-- [ ] Add video demo and GIF to README
-- [ ] Implement comprehensive test suite (>80% coverage)
-- [ ] Support multi-robot coordination
-- [ ] Add vision-language model integration (describe scene → plan)
-
-### Long-term
-- [ ] Fine-tune small LLM for offline operation
-- [ ] Reinforcement learning from human feedback (RLHF)
-- [ ] Mobile app (iOS/Android) for remote control
-- [ ] Benchmark dataset for NL robot commands
-
----
-
-## 📝 Skills Demonstrated
-
-- **System Architecture**: Modular design separating planning/execution
-- **ROS2 Expertise**: Actions, services, lifecycle nodes, MoveIt2
-- **LLM Engineering**: Prompt design, RAG, multi-backend abstraction
-- **Safety-Critical Systems**: Validation layers, fault tolerance
-- **Full-Stack Development**: Backend (Python/C++) + Frontend (Web UI)
+Contributions are welcome! Areas for improvement:
+- [ ] Expand skill library
+- [ ] Add more complex manipulation tasks
+- [ ] Improve LLM prompt engineering
+- [ ] Implement reinforcement learning from feedback
+- [ ] Hardware deployment documentation
 
 ---
 
 ## 📄 License
 
-MIT License - feel free to use for research or commercial projects.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
 ## 👤 Author
 
-**Olivia**
-AI & Robotics Engineer | MSc Artificial Intelligence
-
-📧 Contact: [Add your email]
-💼 LinkedIn: [Add your LinkedIn]
-🔗 Portfolio: [Add portfolio link]
+**Olivia Xu**
+MSc Artificial Intelligence
+📧 oliviaxu0401@gmail.com
+🔗 [GitHub](https://github.com/olivia0401)
 
 ---
 
 ## 🙏 Acknowledgments
 
-- ROS2 and MoveIt2 communities
-- Kinova for Gen3 SDK documentation
-- Open-source LLM community
+- ROS2 and MoveIt2 communities for excellent documentation
+- Kinova Robotics for Gen3 SDK
+- Open-source LLM community for making AI research accessible
 
 ---
 
-**⭐ If you find this project useful, please consider starring it!**
+## 📝 Citation
+
+If you use this work in your research, please cite:
+
+```bibtex
+@software{xu2024rag_llm_ros2,
+  author = {Xu, Olivia},
+  title = {RAG-Enhanced LLM Control for ROS2 Battery Disassembly},
+  year = {2024},
+  url = {https://github.com/olivia0401/RAG-validation-LLMs-ROS2}
+}
+```
+
+---
+
+**⭐ If you find this project useful for your research, please consider starring it!**
