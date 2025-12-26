@@ -307,7 +307,7 @@ AI & Robotics Engineer | MSc Artificial Intelligence
 
 - ROS2 and MoveIt2 communities
 - Kinova for Gen3 SDK documentation
-- OpenAI and Anthropic for LLM APIs
+- Open-source LLM community
 
 ---
 

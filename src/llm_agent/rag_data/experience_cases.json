@@ -1,0 +1,450 @@
+[
+  {
+    "id": "case_1763333608857",
+    "task": "Remove the bolt and place it in the tray",
+    "plan": {
+      "plan": [
+        {
+          "step": 1,
+          "name": "grasp",
+          "params": {
+            "target": "TopCoverBolts"
+          }
+        },
+        {
+          "step": 2,
+          "name": "moveTo",
+          "params": {
+            "target": "place_bolts"
+          }
+        },
+        {
+          "step": 3,
+          "name": "release",
+          "params": {
+            "target": "TopCoverBolts"
+          }
+        }
+      ],
+      "rag_context": []
+    },
+    "execution_time": 18.64780879020691,
+    "timestamp": 1763333608.8578691
+  },
+  {
+    "id": "case_1763410287843",
+    "task": "Remove the bolt and place it in the tray",
+    "plan": {
+      "plan": [
+        {
+          "step": 1,
+          "name": "grasp",
+          "params": {
+            "target": "TopCoverBolts"
+          }
+        },
+        {
+          "step": 2,
+          "name": "moveTo",
+          "params": {
+            "target": "place_bolts"
+          }
+        },
+        {
+          "step": 3,
+          "name": "release",
+          "params": {
+            "target": "TopCoverBolts"
+          }
+        }
+      ],
+      "rag_context": [
+        {
+          "task": "Remove the bolt and place it in the tray",
+          "plan": {
+            "plan": [
+              {
+                "step": 1,
+                "name": "grasp",
+                "params": {
+                  "target": "TopCoverBolts"
+                }
+              },
+              {
+                "step": 2,
+                "name": "moveTo",
+                "params": {
+                  "target": "place_bolts"
+                }
+              },
+              {
+                "step": 3,
+                "name": "release",
+                "params": {
+                  "target": "TopCoverBolts"
+                }
+              }
+            ],
+            "rag_context": []
+          },
+          "execution_time": 18.64780879020691,
+          "similarity_score": 1.0
+        }
+      ]
+    },
+    "execution_time": 9.299417972564695,
+    "timestamp": 1763410287.8437328
+  },
+  {
+    "id": "case_1763410326230",
+    "task": "pick up the batterybox",
+    "plan": {
+      "plan": [
+        {
+          "step": 1,
+          "name": "grasp",
+          "params": {
+            "target": "BatteryBox_0"
+          }
+        }
+      ],
+      "rag_context": [
+        {
+          "task": "Remove the bolt and place it in the tray",
+          "plan": {
+            "plan": [
+              {
+                "step": 1,
+                "name": "grasp",
+                "params": {
+                  "target": "TopCoverBolts"
+                }
+              },
+              {
+                "step": 2,
+                "name": "moveTo",
+                "params": {
+                  "target": "place_bolts"
+                }
+              },
+              {
+                "step": 3,
+                "name": "release",
+                "params": {
+                  "target": "TopCoverBolts"
+                }
+              }
+            ],
+            "rag_context": []
+          },
+          "execution_time": 18.64780879020691,
+          "similarity_score": -0.5733815431594849
+        },
+        {
+          "task": "Remove the bolt and place it in the tray",
+          "plan": {
+            "plan": [
+              {
+                "step": 1,
+                "name": "grasp",
+                "params": {
+                  "target": "TopCoverBolts"
+                }
+              },
+              {
+                "step": 2,
+                "name": "moveTo",
+                "params": {
+                  "target": "place_bolts"
+                }
+              },
+              {
+                "step": 3,
+                "name": "release",
+                "params": {
+                  "target": "TopCoverBolts"
+                }
+              }
+            ],
+            "rag_context": [
+              {
+                "task": "Remove the bolt and place it in the tray",
+                "plan": {
+                  "plan": [
+                    {
+                      "step": 1,
+                      "name": "grasp",
+                      "params": {
+                        "target": "TopCoverBolts"
+                      }
+                    },
+                    {
+                      "step": 2,
+                      "name": "moveTo",
+                      "params": {
+                        "target": "place_bolts"
+                      }
+                    },
+                    {
+                      "step": 3,
+                      "name": "release",
+                      "params": {
+                        "target": "TopCoverBolts"
+                      }
+                    }
+                  ],
+                  "rag_context": []
+                },
+                "execution_time": 18.64780879020691,
+                "similarity_score": 1.0
+              }
+            ]
+          },
+          "execution_time": 9.299417972564695,
+          "similarity_score": -0.5733815431594849
+        }
+      ]
+    },
+    "execution_time": 5.138851642608643,
+    "timestamp": 1763410326.2307832
+  },
+  {
+    "id": "case_1763410358758",
+    "task": "place the batterybox",
+    "plan": {
+      "plan": [
+        {
+          "step": 1,
+          "name": "grasp",
+          "params": {
+            "target": "BatteryBox_0"
+          }
+        },
+        {
+          "step": 2,
+          "name": "moveTo",
+          "params": {
+            "target": "place_bolts"
+          }
+        },
+        {
+          "step": 3,
+          "name": "release",
+          "params": {
+            "target": "BatteryBox_0"
+          }
+        }
+      ],
+      "rag_context": [
+        {
+          "task": "pick up the batterybox",
+          "plan": {
+            "plan": [
+              {
+                "step": 1,
+                "name": "grasp",
+                "params": {
+                  "target": "BatteryBox_0"
+                }
+              }
+            ],
+            "rag_context": [
+              {
+                "task": "Remove the bolt and place it in the tray",
+                "plan": {
+                  "plan": [
+                    {
+                      "step": 1,
+                      "name": "grasp",
+                      "params": {
+                        "target": "TopCoverBolts"
+                      }
+                    },
+                    {
+                      "step": 2,
+                      "name": "moveTo",
+                      "params": {
+                        "target": "place_bolts"
+                      }
+                    },
+                    {
+                      "step": 3,
+                      "name": "release",
+                      "params": {
+                        "target": "TopCoverBolts"
+                      }
+                    }
+                  ],
+                  "rag_context": []
+                },
+                "execution_time": 18.64780879020691,
+                "similarity_score": -0.5733815431594849
+              },
+              {
+                "task": "Remove the bolt and place it in the tray",
+                "plan": {
+                  "plan": [
+                    {
+                      "step": 1,
+                      "name": "grasp",
+                      "params": {
+                        "target": "TopCoverBolts"
+                      }
+                    },
+                    {
+                      "step": 2,
+                      "name": "moveTo",
+                      "params": {
+                        "target": "place_bolts"
+                      }
+                    },
+                    {
+                      "step": 3,
+                      "name": "release",
+                      "params": {
+                        "target": "TopCoverBolts"
+                      }
+                    }
+                  ],
+                  "rag_context": [
+                    {
+                      "task": "Remove the bolt and place it in the tray",
+                      "plan": {
+                        "plan": [
+                          {
+                            "step": 1,
+                            "name": "grasp",
+                            "params": {
+                              "target": "TopCoverBolts"
+                            }
+                          },
+                          {
+                            "step": 2,
+                            "name": "moveTo",
+                            "params": {
+                              "target": "place_bolts"
+                            }
+                          },
+                          {
+                            "step": 3,
+                            "name": "release",
+                            "params": {
+                              "target": "TopCoverBolts"
+                            }
+                          }
+                        ],
+                        "rag_context": []
+                      },
+                      "execution_time": 18.64780879020691,
+                      "similarity_score": 1.0
+                    }
+                  ]
+                },
+                "execution_time": 9.299417972564695,
+                "similarity_score": -0.5733815431594849
+              }
+            ]
+          },
+          "execution_time": 5.138851642608643,
+          "similarity_score": 0.6908997297286987
+        },
+        {
+          "task": "Remove the bolt and place it in the tray",
+          "plan": {
+            "plan": [
+              {
+                "step": 1,
+                "name": "grasp",
+                "params": {
+                  "target": "TopCoverBolts"
+                }
+              },
+              {
+                "step": 2,
+                "name": "moveTo",
+                "params": {
+                  "target": "place_bolts"
+                }
+              },
+              {
+                "step": 3,
+                "name": "release",
+                "params": {
+                  "target": "TopCoverBolts"
+                }
+              }
+            ],
+            "rag_context": []
+          },
+          "execution_time": 18.64780879020691,
+          "similarity_score": -0.3887350559234619
+        },
+        {
+          "task": "Remove the bolt and place it in the tray",
+          "plan": {
+            "plan": [
+              {
+                "step": 1,
+                "name": "grasp",
+                "params": {
+                  "target": "TopCoverBolts"
+                }
+              },
+              {
+                "step": 2,
+                "name": "moveTo",
+                "params": {
+                  "target": "place_bolts"
+                }
+              },
+              {
+                "step": 3,
+                "name": "release",
+                "params": {
+                  "target": "TopCoverBolts"
+                }
+              }
+            ],
+            "rag_context": [
+              {
+                "task": "Remove the bolt and place it in the tray",
+                "plan": {
+                  "plan": [
+                    {
+                      "step": 1,
+                      "name": "grasp",
+                      "params": {
+                        "target": "TopCoverBolts"
+                      }
+                    },
+                    {
+                      "step": 2,
+                      "name": "moveTo",
+                      "params": {
+                        "target": "place_bolts"
+                      }
+                    },
+                    {
+                      "step": 3,
+                      "name": "release",
+                      "params": {
+                        "target": "TopCoverBolts"
+                      }
+                    }
+                  ],
+                  "rag_context": []
+                },
+                "execution_time": 18.64780879020691,
+                "similarity_score": 1.0
+              }
+            ]
+          },
+          "execution_time": 9.299417972564695,
+          "similarity_score": -0.3887350559234619
+        }
+      ]
+    },
+    "execution_time": 4.105422735214233,
+    "timestamp": 1763410358.7585964
+  }
+]

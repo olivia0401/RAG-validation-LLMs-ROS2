@@ -28,3 +28,15 @@ __pycache__/
 # Temporary files
 *.tmp
 *.bak
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# API keys and sensitive data
+.env
+*.key
+
+# RAG database
+src/llm_agent/rag_data/chromadb/
